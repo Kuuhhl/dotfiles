@@ -1,0 +1,37 @@
+XTerm*termName: xterm
+XTerm*utf8: 1
+XTerm*locale: true
+xterm*faceName: JetBrainsMono Nerd Font
+xterm*faceSize: 13
+xterm*BorderWidth: 2
+xterm*BorderColor: #ec4646
+xterm*renderFont: true
+xterm*loginShell: true
+xterm*internalBorder: 10
+XTerm*saveLines: 4500
+XTerm*selectToClipboard: false
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+
+! Colors
+*background: #101010
+*foreground: #EFF0F1
+
+*color0:     #252525
+*color1:     #C34646
+*color2:     #8C9440
+*color3:     #EAB244
+*color4:     #5F819D
+*color5:     #85678F
+*color6:     #5E8D87
+*color7:     #6D6D6D
+
+*color8:     #2F2F2F
+*color9:     #CC6666
+*color10:    #B5BD68
+*color11:    #E7BE6D
+*color12:    #81A2BE
+*color13:    #B88CAA
+*color14:    #8ABEB7
+*color15:    #EFF0F1
