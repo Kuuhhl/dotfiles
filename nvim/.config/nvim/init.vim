@@ -59,7 +59,8 @@ else
 endif
 
 " Now the actual plugins:
-
+" Markdown Plugin 
+Plug 'instant-markdown/vim-instant-markdown'
 " Discord Rich presence
 Plug 'hugolgst/vimsence'
 " Override configs by directory
@@ -276,6 +277,15 @@ au FileType python map <silent> <leader>b Oimport ipdb; ipdb.set_trace()<esc>
 map <F4> :TagbarToggle<CR>
 " autofocus on tagbar open
 let g:tagbar_autofocus = 1
+" Discord Rich Presence -------------------
+let g:vimsence_client_id = '439476230543245312'
+let g:vimsence_small_text = 'NeoVim'
+let g:vimsence_small_image = 'neovim'
+let g:vimsence_editing_details = 'Editing: {}'
+let g:vimsence_editing_state = 'Working on: {}'
+let g:vimsence_file_explorer_text = 'In NERDTree'
+let g:vimsence_file_explorer_details = 'Looking for files'
+let g:vimsence_custom_icons = {'filetype': 'iconname'}
 
 " NERDTree -----------------------------
 
@@ -424,6 +434,7 @@ if using_neovim
 else
     let g:yankring_history_dir = '~/.vim/dirs/'
 endif
+
 
 " Airline ------------------------------
 

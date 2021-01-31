@@ -177,7 +177,7 @@ type = custom/script
 interval = 3600
 format-underline = ${colors.purple}
 format = <label>
-exec = python ~/.config/polybar/scripts/coronaWidget.py -lo -ar -up "  " -dw "  " -pre "%{T5} %{T-}"
+exec = python ~/.config/polybar/scripts/coronaWidget.py -lo -up "  " -dw "  " -suf " " -pre "%{T5} %{T-}"
 
 [module/mining]
 type = custom/script

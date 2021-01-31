@@ -50,10 +50,10 @@ case $1 in
   temperature)
     case $REDSHIFT in
       on)
-          echo "%{u#ec4646}%{+u}""""%{T-}"
+          echo "%{u#ec4646}%{+u}"  "%{T-}"
         ;;
       off)
-        printf ""
+        printf "  "
         ;;
     esac
     ;;
