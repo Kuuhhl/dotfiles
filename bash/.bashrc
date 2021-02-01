@@ -47,3 +47,5 @@ PERL_MM_OPT="INSTALL_BASE=/home/philipp/perl5"; export PERL_MM_OPT;
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias config='/usr/bin/git --git-dir=/home/philipp/.cfg/ --work-tree=/home/philipp'
+
+eval "$(thefuck --alias)"
