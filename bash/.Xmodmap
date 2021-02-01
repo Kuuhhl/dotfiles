@@ -260,3 +260,5 @@ keysym j = j J Down
 keycode 22 = BackSpace BackSpace Delete
 keysym m = m M Prior  
 keysym n = n N Next
+keycode 65 = space space Escape
+keycode 47 = colon semicolon semicolon

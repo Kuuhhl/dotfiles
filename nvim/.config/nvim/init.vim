@@ -244,14 +244,14 @@ set wildmode=list:longest
 ca w!! w !sudo tee "%"
 
 " tab navigation mappings
-map tt :tabnew 
-map <M-Right> :tabn<CR>
-imap <M-Right> <ESC>:tabn<CR>
-map <M-Left> :tabp<CR>
-imap <M-Left> <ESC>:tabp<CR>
+" map tt :tabnew 
+" map <M-Right> :tabn<CR>
+" imap <M-Right> <ESC>:tabn<CR>
+" map <M-Left> :tabp<CR>
+" imap <M-Left> <ESC>:tabp<CR>
 
 " when scrolling, keep cursor 3 lines away from screen border
-set scrolloff=3
+set scrolloff=5
 
 " clear search results
 nnoremap <silent> // :noh<CR>
@@ -265,7 +265,7 @@ set shell=/bin/bash
 
 " Ability to add python breakpoints
 " (I use ipdb, but you can change it to whatever tool you use for debugging)
-au FileType python map <silent> <leader>b Oimport ipdb; ipdb.set_trace()<esc>
+" au FileType python map <silent> <leader>b Oimport ipdb; ipdb.set_trace()<esc>
 
 " ============================================================================
 " Plugins settings and mappings
@@ -292,7 +292,7 @@ let g:vimsence_custom_icons = {'filetype': 'iconname'}
 " toggle nerdtree display
 map <F3> :NERDTreeToggle<CR>
 " open nerdtree with the current file selected
-nmap ,t :NERDTreeFind<CR>
+nmap <leader>v :NERDTreeFind<CR>
 " don;t show these file types
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 
@@ -322,7 +322,7 @@ autocmd BufEnter * call NERDTreeRefresh()
 " Tasklist ------------------------------
 
 " show pending tasks list
-map <F2> :TaskList<CR>
+" map <F2> :TaskList<CR>
 
 " Neomake ------------------------------
 
@@ -391,15 +391,15 @@ nmap ,D :tab split<CR>:call jedi#goto()<CR>
 " Ack.vim ------------------------------
 
 " mappings
-nmap ,r :Ack 
-nmap ,wr :execute ":Ack " . expand('<cword>')<CR>
+" nmap ,r :Ack 
+" nmap ,wr :execute ":Ack " . expand('<cword>')<CR>
 
 " Window Chooser ------------------------------
 
 " mapping
-nmap  -  <Plug>(choosewin)
+" nmap  -  <Plug>(choosewin)
 " show big letters
-let g:choosewin_overlay_enable = 1
+" let g:choosewin_overlay_enable = 1
 
 " Signify ------------------------------
 
@@ -407,8 +407,8 @@ let g:choosewin_overlay_enable = 1
 " UPDATE it to reflect your preferences, it will speed up opening files
 let g:signify_vcs_list = ['git', 'hg']
 " mappings to jump to changed blocks
-nmap <leader>sn <plug>(signify-next-hunk)
-nmap <leader>sp <plug>(signify-prev-hunk)
+" nmap <leader>sn <plug>(signify-next-hunk)
+" nmap <leader>sp <plug>(signify-prev-hunk)
 " nicer colors
 highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
 highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
@@ -475,7 +475,11 @@ if filereadable(expand(custom_configs_path))
 endif
 " shortcut for running python script
 nmap <F9> :!python %<cr>
+nnoremap <leader>e :!python %<cr>
 " autoformat on save
 autocmd BufWritePre *.py execute ':Black'
-" keybind for formatting
+" keybinds for formatting
 nnoremap <F10> :Black<CR>
+nnoremap <leader>f :Black<cr>
+" keybind for Leader-Key
+map <SPACE> <Leader>
