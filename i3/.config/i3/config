@@ -220,6 +220,6 @@ bindsym $mod+shift+d  exec rofi -show window
 # autostart
 exec_always --no-startup-id gnirehtet autorun
 exec --no-startup-id dunst &
-
+exec --no-startup-id ~/bin/push_config.sh
 # polkit agent
 exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
