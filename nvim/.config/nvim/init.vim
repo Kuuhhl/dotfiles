@@ -60,7 +60,8 @@ endif
 
 " Now the actual plugins:
 " Markdown Plugin 
-Plug 'instant-markdown/vim-instant-markdown'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
+filetype plugin on
 " Discord Rich presence
 Plug 'hugolgst/vimsence'
 " Override configs by directory

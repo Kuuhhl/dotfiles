@@ -23,6 +23,7 @@ alias g='git status'
 alias bashrc='e ~/.bashrc'
 alias polyconf='e ~/.config/polybar/config'
 alias i3conf='e ~/.config/i3/config'
+alias vimrc='e ~/.config/nvim/init.vim'
 alias install='yay -S'
 alias uninstall='yay -Rns'
 alias remove='yay -Rns'
@@ -33,7 +34,8 @@ alias please='sudo $(history -p !!)'
 alias google='googler'
 alias ls='clear && ls'
 alias sl='ls'
-# ufetch
+
+# Start ufetch with Terminal
 ufetch
 #color in grep
 export GREP_OPTIONS=' — color=auto'
