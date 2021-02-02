@@ -5,16 +5,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
-PS1='\w \n '
-
+#PS1='\w \n '
+PS1='\[\033[0;31m\]\w\[\033[0m\] \n '
 
 # aliases
 alias r=ranger
 alias q=exit
 alias c=clear
 alias e=nvim
+alias grep='grep -n --color'
 alias gerp=grep
 alias python=python3
 alias pip=pip3
@@ -32,13 +32,11 @@ alias upgrade='yay'
 alias clearcache='yay -Sc --noconfirm'
 alias please='sudo $(history -p !!)'
 alias google='googler'
-alias ls='clear && ls'
+alias ls='clear && ls --color=auto'
 alias sl='ls'
-
+alias l='ls'
 # Start ufetch with Terminal
 ufetch
-#color in grep
-export GREP_OPTIONS=' — color=auto'
 #default editor
 export EDITOR=nvim
 PATH="/home/philipp/perl5/bin${PATH:+:${PATH}}"; export PATH;
