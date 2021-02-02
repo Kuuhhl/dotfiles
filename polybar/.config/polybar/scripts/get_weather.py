@@ -29,8 +29,7 @@ round()
 echo $(printf %.$2f $(echo "scale=$2;(((10^$2)*$1)+0.5)/(10^$2)" | bc))
 };
 
-
-KEY="7e0253b0a9092c61fccf0ae6021212eb"
+KEY=$OPENWEATHERKEY
 CITY="Staufen im Breisgau"
 UNITS="metric"
 SYMBOL="°C"

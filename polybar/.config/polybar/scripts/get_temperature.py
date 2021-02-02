@@ -4,7 +4,7 @@ import sys
 
 if __name__ == "__main__":
     # Variables for API
-    key = "7e0253b0a9092c61fccf0ae6021212eb"
+    key = os.environ.get("OPENWEATHERKEY")
     city_name = "Staufen im Breisgau"
 
     try:
