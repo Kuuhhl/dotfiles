@@ -428,7 +428,7 @@ highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 " Yankring -------------------------------
 
 if using_neovim
-    let g:yankring_history_dir = '~/.config/nvim/'
+    let g:yankring_history_dir = '~/.cache'
     " Fix for yankring and neovim problem when system has non-text things
     " copied in clipboard
     let g:yankring_clipboard_monitor = 0
