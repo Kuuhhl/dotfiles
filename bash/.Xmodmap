@@ -247,7 +247,7 @@ keycode 253 =
 keycode 254 = XF86WWAN NoSymbol XF86WWAN
 keycode 255 = XF86RFKill NoSymbol XF86RFKill
 
-keycode 66 = Mode_switch
+keycode 66 = BackSpace Delete 
 keycode 39 = s S ssharp
 keycode 38 = a A adiaeresis Adiaeresis
 keycode 30 = u U udiaeresis Udiaeresis
@@ -257,7 +257,7 @@ keysym h = h H Left
 keysym l = l L Right
 keysym k = k K Up
 keysym j = j J Down
-keycode 22 = BackSpace BackSpace Delete
+keycode 22 = Mode_switch
 keysym m = m M Prior  
 keysym n = n N Next
 keycode 65 = space space Escape
