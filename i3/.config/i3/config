@@ -203,6 +203,9 @@ bindsym Control+Mod1+Return exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym Control+Mod1+k exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym Control+Mod1+j exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
+# shortcut to center window in floating mode
+bindsym $mod+shift+BackSpace floating toggle; resize set 1920 1080; move position center;
+
 # autostart
 exec --no-startup-id dunst &
 exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
