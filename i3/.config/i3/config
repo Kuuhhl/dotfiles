@@ -49,11 +49,11 @@ bindsym $mod+Shift+q kill
 # take screenshots
 bindsym Control+Print exec flameshot gui
 
-# start dmenu (a program launcher)
+# start rofi (a program launcher)
 bindsym $mod+q exec --no-startup-id rofi -show-icons -show drun
 bindsym $mod+d exec --no-startup-id rofi -show-icons -show drun
 
-# start dmenu window switcher
+# start rofi window switcher
 bindsym $mod+Tab exec --no-startup-id rofi -show window -show-icons
 
 # change focus
@@ -150,7 +150,6 @@ bindsym $mod+Shift+Tab exec --no-startup-id firefox
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
@@ -180,21 +179,15 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# polybar
+# start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # no borders
 for_window [class="^.*"] border pixel 0
 
-
-# start torguard on startup
-# exec --no-startup-id $HOME/.config/VPNetworkLLC/launch.sh
-
 # specific window rules
 for_window [class="Pavucontrol"] floating enable; move position center
-
 for_window [class="floatingConsole"] floating enable; move position absolute center;
-
 
 # change wallpaper on startup
 exec_always --no-startup-id nitrogen --restore &
@@ -206,21 +199,10 @@ bindsym $mod+Shift+z exec dm-tool switch-to-greeter
 bindsym $mod+Shift+s exec rofi -show power-menu -modi "power-menu:rofi-power-menu --choices=shutdown/reboot --no-symbols --confirm=''"
 
 # volume controls
-bindsym Control+Mod1+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym Control+Mod1+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym Control+Mod1+Return exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-
 bindsym Control+Mod1+k exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym Control+Mod1+l exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-
-
-# rofi window switcher shortcut
-bindsym $mod+shift+d  exec rofi -show window
+bindsym Control+Mod1+j exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 # autostart
-exec_always --no-startup-id gnirehtet autorun
 exec --no-startup-id dunst &
-exec --no-startup-id ~/bin/push_config.sh
-exec --no-startup-id premid &
-# polkit agent
 exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
