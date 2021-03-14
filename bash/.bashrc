@@ -7,7 +7,7 @@ PS1='\[\033[0;31m\] \w\[\033[0m\] \n '
 alias r=ranger
 alias q=exit
 alias c=clear
-alias e=vim
+alias e=nvim
 alias python=python3
 alias pip=pip3
 alias :q=exit
@@ -28,7 +28,7 @@ alias cd='clear && cd'
 ufetch
 
 # set default editor
-export EDITOR=vim
+export EDITOR=nvim
 
 # fzf 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
