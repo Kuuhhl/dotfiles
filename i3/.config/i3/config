@@ -182,8 +182,15 @@ bindsym $mod+r mode "resize"
 # start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# auto switch to urgent
+focus_on_window_activation urgent
+
 # no borders
-for_window [class="^.*"] border pixel 0
+default_border pixel 1
+hide_edge_borders smart
+# colors                
+set $accent #f0dfaf
+client.focused          $accent $accent $accent $accent $accent
 
 # specific window rules
 for_window [class="Pavucontrol"] floating enable; move position center
@@ -209,3 +216,18 @@ bindsym $mod+shift+BackSpace floating toggle; resize set 1920 1080; move positio
 # autostart
 exec --no-startup-id dunst &
 exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
+
+# set default gaps
+# gaps inner all set 20
+# gaps outer all set 0
+
+
+# gaps keybinds
+bindsym $mod+shift+i gaps inner all minus 10
+bindsym $mod+shift+o gaps inner all plus 10
+
+bindsym $mod+i gaps outer all minus 10
+bindsym $mod+o gaps outer all plus 10
+
+bindsym $mod+shift+u gaps inner all set 0; gaps outer all set 0 
+bindsym $mod+shift+p gaps inner all set 40; gaps outer all set 0 

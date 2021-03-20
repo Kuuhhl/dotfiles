@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='\[\033[0;31m\] \w\[\033[0m\] \n '
+PS1='\[\033[0;33m\] \w\[\033[0m\] \n '
 
 # aliases
 alias r=ranger
@@ -32,4 +32,3 @@ export EDITOR=nvim
 
 # fzf 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
