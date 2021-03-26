@@ -1,13 +1,11 @@
 call plug#begin("~/.config/nvim/plugged")
 Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'} " Markdown viewer
-Plug 'vimsence/vimsence' " Discord Rich Presence
 Plug 'vim-airline/vim-airline' " status bar
 Plug 'vim-airline/vim-airline-themes' "status bar theme
 Plug 'sheerun/vim-polyglot' " language packs
 Plug 'https://github.com/morhetz/gruvbox' " color theme
 Plug 'valloric/youcompleteme' " autoclompletion
-Plug 'nvie/vim-flake8' " python syntax and style checker
 Plug 'vim-syntastic/syntastic' " syntax checkings
 Plug 'ctrlpvim/ctrlp.vim' " file finder
 Plug 'raimondi/delimitmate' " auto closing brackets/quotes/...
@@ -16,13 +14,6 @@ call plug#end()
 
 " Markdown viewer settings
 filetype plugin on
-
-" settings for discord rich presence
-let g:vimsence_client_id = '439476230543245312'
-let g:vimsence_small_text = 'NeoVim'
-let g:vimsence_small_image = 'neovim'
-let g:vimsence_editing_details = 'Editing: {}'
-let g:vimsence_editing_state = 'Working on: {}'
 
 " set backgrounds
 set background=dark

@@ -186,8 +186,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 focus_on_window_activation urgent
 
 # no borders
-default_border pixel 1
+for_window [class=".*"] border pixel 1
 hide_edge_borders smart
+
 # colors                
 set $accent #f0dfaf
 client.focused          $accent $accent $accent $accent $accent
@@ -218,8 +219,8 @@ exec --no-startup-id dunst &
 exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 
 # set default gaps
-# gaps inner all set 20
-# gaps outer all set 0
+gaps inner 40
+gaps outer 0
 
 
 # gaps keybinds
@@ -231,3 +232,4 @@ bindsym $mod+o gaps outer all plus 10
 
 bindsym $mod+shift+u gaps inner all set 0; gaps outer all set 0 
 bindsym $mod+shift+p gaps inner all set 40; gaps outer all set 0 
+
