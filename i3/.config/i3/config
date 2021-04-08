@@ -101,7 +101,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -222,7 +222,6 @@ exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 gaps inner 40
 gaps outer 0
 
-
 # gaps keybinds
 bindsym $mod+shift+i gaps inner all minus 10
 bindsym $mod+shift+o gaps inner all plus 10
@@ -233,3 +232,5 @@ bindsym $mod+o gaps outer all plus 10
 bindsym $mod+shift+u gaps inner all set 0; gaps outer all set 0 
 bindsym $mod+shift+p gaps inner all set 40; gaps outer all set 0 
 
+# hide/show polybar 
+bindsym $mod+a exec polybar-msg cmd toggle
